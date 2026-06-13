@@ -183,15 +183,14 @@ Custom [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills for 
 6. [Community Showcase — Papers Built with ARIS](#community-showcase)
 7. [Awesome Community Skills & Extensions](#awesome-community-skills)
 8. [Workflows](#workflows) · 13 named pipelines (W1 / W1.5 / W2 / W3 / W4 / W5 / W6 / Wiki / WM + Effort / Assurance / Oracle)
-9. [Skills Catalog](#skills-catalog)
-10. [Setup](#setup) · prerequisites / install / update / usage / [GPU server config](#gpu-server-setup)
-11. [Customization](#customization) · per-skill config knobs
-12. [Alternative Model Combinations](#alternative-model-combinations) · GLM / MiniMax / Kimi / etc.
-13. [Community](#community)
-14. [Citation](#citation)
-15. [Star History](#star-history)
-16. [Acknowledgements](#acknowledgements)
-17. [License](#license)
+9. [Setup](#setup) · prerequisites / install / update / usage / [GPU server config](#gpu-server-setup)
+10. [Customization](#customization) · per-skill config knobs
+11. [Alternative Model Combinations](#alternative-model-combinations) · GLM / MiniMax / Kimi / etc.
+12. [Community](#community)
+13. [Citation](#citation)
+14. [Star History](#star-history)
+15. [Acknowledgements](#acknowledgements)
+16. [License](#license)
 
 ---
 
@@ -544,6 +543,32 @@ ARIS chains **79 composable skills** across the whole research lifecycle — lit
 - 🧩 **Extensible** — domain-specific skills welcome! Add a `SKILL.md` and open a PR. See [community skills](#awesome-community-skills) like [`dse-loop`](skills/dse-loop/SKILL.md) (architecture/EDA)
 
 </details>
+
+<a id="skills-catalog"></a>
+<a id="-skills-catalog"></a>
+
+ARIS ships **79+ skills** across literature, ideation, experiments, audit, writing, talks, patents, and meta-utilities — the full catalog (role / category / requirements per skill) lives in **[`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md)** to keep this README scannable.
+
+<details>
+<summary><b>Start here</b> — common entry points (use case → skill)</summary>
+
+| Use case | Start here |
+|---|---|
+| End-to-end research (idea → paper) | [`/research-pipeline`](skills/research-pipeline/SKILL.md) |
+| Idea discovery + method refinement | [`/idea-discovery`](skills/idea-discovery/SKILL.md) |
+| Run experiments from a plan | [`/experiment-bridge`](skills/experiment-bridge/SKILL.md) |
+| Auto review → fix → re-review | [`/auto-review-loop`](skills/auto-review-loop/SKILL.md) |
+| Narrative → polished PDF | [`/paper-writing`](skills/paper-writing/SKILL.md) |
+| Reply to peer reviews | [`/rebuttal`](skills/rebuttal/SKILL.md) |
+| Port a paper to a new venue | [`/resubmit-pipeline`](skills/resubmit-pipeline/SKILL.md) |
+| Paper → conference talk | [`/paper-talk`](skills/paper-talk/SKILL.md) |
+| Persistent research memory | [`/research-wiki`](skills/research-wiki/SKILL.md) |
+| Patent drafting (CN / US / EP) | [`/patent-pipeline`](skills/patent-pipeline/SKILL.md) |
+| ARIS optimizes itself | [`/meta-optimize`](skills/meta-optimize/SKILL.md) |
+
+</details>
+
+→ **[Browse all 79 skills by category in the full catalog →](docs/SKILLS_CATALOG.md)**
 
 ---
 
@@ -1285,44 +1310,10 @@ Add `— reviewer: oracle-pro` to any reviewer-aware skill (`/proof-checker`, `/
 
 ---
 
-<a id="skills-catalog"></a>
-<a id="-skills-catalog"></a>
-
-## 9. 🧰 Skills Catalog
-
-ARIS ships **79+ skills** across literature, ideation, experiments, audit,
-writing, talks, patents, and meta-utilities. The full catalog (with role,
-category, and requirements per skill) lives in
-**[`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md)** to keep this README
-scannable.
-
-<details>
-<summary><b>Start here</b> — common entry points (use case → skill)</summary>
-
-| Use case | Start here |
-|---|---|
-| End-to-end research (idea → paper) | [`/research-pipeline`](skills/research-pipeline/SKILL.md) |
-| Idea discovery + method refinement | [`/idea-discovery`](skills/idea-discovery/SKILL.md) |
-| Run experiments from a plan | [`/experiment-bridge`](skills/experiment-bridge/SKILL.md) |
-| Auto review → fix → re-review | [`/auto-review-loop`](skills/auto-review-loop/SKILL.md) |
-| Narrative → polished PDF | [`/paper-writing`](skills/paper-writing/SKILL.md) |
-| Reply to peer reviews | [`/rebuttal`](skills/rebuttal/SKILL.md) |
-| Port a paper to a new venue | [`/resubmit-pipeline`](skills/resubmit-pipeline/SKILL.md) |
-| Paper → conference talk | [`/paper-talk`](skills/paper-talk/SKILL.md) |
-| Persistent research memory | [`/research-wiki`](skills/research-wiki/SKILL.md) |
-| Patent drafting (CN / US / EP) | [`/patent-pipeline`](skills/patent-pipeline/SKILL.md) |
-| ARIS optimizes itself | [`/meta-optimize`](skills/meta-optimize/SKILL.md) |
-
-</details>
-
-→ **[Browse all 77 skills by category in the full catalog →](docs/SKILLS_CATALOG.md)**
-
----
-
 <a id="setup"></a>
 <a id="-setup"></a>
 
-## 10. ⚙️ Setup
+## 9. ⚙️ Setup
 
 > 📖 **New to ARIS?** [`SETUP_GUIDE.md`](SETUP_GUIDE.md) ([中文](SETUP_GUIDE_CN.md)) gives a prescriptive 6-step walkthrough for macOS local + remote Linux GPU server with Claude Code + Codex MCP — the recommended path. The section below is a quick reference; deeper GPU / customization / model-combo setup lives in the linked docs.
 
@@ -1548,13 +1539,13 @@ Plug your library / vault / notifications into ARIS — each auto-skips silently
 <a id="customization"></a>
 <a id="-customization"></a>
 
-## 11. 🎛️ Customization
+## 10. 🎛️ Customization
 
 Skills are plain Markdown — fork and tune them. Per-skill environment variables (GPU target, code review, reviewer routing, human checkpoints, paper-writing knobs) and parameter pass-through live in **[docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md)**.
 
 <a id="alternative-model-combinations"></a>
 
-## 12. 🔀 Alternative Model Combinations
+## 11. 🔀 Alternative Model Combinations
 
 <a id="alt-a-glm--gpt"></a>
 
@@ -1562,7 +1553,7 @@ No Claude / OpenAI API? Swap in other providers — same cross-model architectur
 
 <a id="community"></a>
 
-## 13. 💬 Community
+## 12. 💬 Community
 
 **Domain-specific skills welcome!** The core skills cover general research workflows, but every field has its own tools and patterns. We welcome PRs that add new skills for your domain — EDA, bioinformatics, robotics, HPC, or anything else. Just add a `skills/your-skill/SKILL.md` and open a PR. See [`dse-loop`](skills/dse-loop/SKILL.md) for an example.
 
@@ -1572,7 +1563,7 @@ Join the WeChat group for discussion on Claude Code + AI-driven research workflo
 
 <a id="citation"></a>
 
-## 14. 📖 Citation
+## 13. 📖 Citation
 
 If you use ARIS in your research, please cite:
 
@@ -1587,7 +1578,7 @@ If you use ARIS in your research, please cite:
 
 <a id="star-history"></a>
 
-## 15. ⭐ Star History
+## 14. ⭐ Star History
 
 ![GitHub stars](https://img.shields.io/github/stars/wanshuiyin/Auto-claude-code-research-in-sleep?style=social)
 
@@ -1595,7 +1586,7 @@ If you use ARIS in your research, please cite:
 
 <a id="acknowledgements"></a>
 
-## 16. 🙏 Acknowledgements
+## 15. 🙏 Acknowledgements
 
 **Inspired by** — 🧪 [AI Scientist](https://github.com/SakanaAI/AI-Scientist) (Sakana) · 📖 [AutoResearch](https://github.com/karpathy/autoresearch) (Karpathy) · 🔭 [FARS](https://analemma.ai/blog/introducing-fars/) (Analemma) · 🎨 [PaperBanana](https://github.com/dwzhu-pku/PaperBanana) (PKU).
 
@@ -1611,6 +1602,6 @@ If you use ARIS in your research, please cite:
 
 <a id="license"></a>
 
-## 17. License
+## 16. License
 
 MIT
